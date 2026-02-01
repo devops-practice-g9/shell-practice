@@ -6,7 +6,7 @@ if [ $NUM -gt 50 ]; then
  
    echo "$NUM is greater than 50"
 
-   elif [ $NUM -eq 20 ]; then
+   elif [ $NUM -eq 50 ]; then
 
    echo "$NUM is equal to 50"
   else
