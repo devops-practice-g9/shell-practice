@@ -27,13 +27,10 @@ for package in $@
 do 
     dnf list installed $package 
     if [ $? -ne 0]; then
-     {
        echo "Software $package was not yet installed" 
        dnf install $package -y
        VALIDATE $? installing $package
-     }
 else
-     { 
       echo "Software $package was already installed" 
-     }
+    fi
 done
