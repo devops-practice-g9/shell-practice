@@ -35,7 +35,7 @@ do
     if [ $? -ne 0 ]; then
        echo -e "$R Software $package was not yet installed" 
        dnf install $package -y &>>$LOG_FILE
-       VALIDATE $? installing $package
+       VALIDATE $? "installing $package"
 else
       echo -e "$Y Software $package was already installed" 
     fi
