@@ -8,6 +8,6 @@ End_Time=$(date +%s)
 
 
 
-Total=$(($Start_Time-$End_Time))
+Total=$(($End_Time-$Start_Time))
 
-echo "Total time is $Total"
+echo "Total time for execution is $Total"
