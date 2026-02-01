@@ -14,3 +14,10 @@ if [ $Userid -ne 0 ]; then
 fi
 
 dnf install $package -y
+
+if [ $? -eq 0 ]: then
+   
+   echo "$package installation....Success"
+else
+   echo "$package installation...Failure"
+fi
