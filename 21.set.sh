@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 echo "Running as UID: $(id -u)"
 whoami
 
