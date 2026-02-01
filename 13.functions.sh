@@ -25,4 +25,8 @@ fi
 dnf install nginxx -y
 VALIDATE $? "Installing Nginx"
 
+dnf install htop -y
+VALIDATE $? "Installing htop"
 
+dnf install nodejs -y
+VALIDATE $? "Installing nodejs"
