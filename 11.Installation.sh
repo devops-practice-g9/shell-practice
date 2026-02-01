@@ -15,7 +15,7 @@ fi
 
 dnf install $package -y
 
-if [ $? -eq 0 ]: then
+if [ $? -eq 0 ]; then
    
    echo "$package installation....Success"
 else
