@@ -7,4 +7,4 @@ B="\e[34m"
 N="\e[0m"
  
 
-echo -e "$B This is Mahesh $N,$Y This is Keeru $N ,This is Parnika and Jeevika"
+echo -e "$B This is Mahesh $N,$Y This is Keeru $N ,$G This is Parnika and Jeevika $N"
