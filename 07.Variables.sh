@@ -7,6 +7,6 @@ echo "Taking all arguments as one: $*"
 echo "who is running the script: $USER"
 echo "Home Directory of the user: $HOME"
 echo "PID of the Script: $$"
-sleep 40
+sleep 15
 echo "Background process ID: $!"
 echo "Present working Directory: $PWD"
