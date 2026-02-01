@@ -10,5 +10,6 @@ if [ $Userid -ne 0 ]; then
     echo "Userid is $Userid"
     echo "Please run the script with sudo root access"
   }
+fi
 
 dnf install $package -y
