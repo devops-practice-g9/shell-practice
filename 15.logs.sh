@@ -7,7 +7,7 @@ LOG_FILE=/var/log/Shell_Script/$0.log
 if [ $Userid -ne 0 ]; then
   {
     echo "Userid is $Userid"
-    echo "Please run the script with sudo root access"
+    echo "Please run the script with sudo root access" | tee -a $LOG_FILE
     exit 1
   }
 fi
