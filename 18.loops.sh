@@ -8,7 +8,7 @@ LOG_FILE=/var/log/Shell_Script/$0.log
 if [ $Userid -ne 0 ]; then
   {
     echo "Userid is $Userid"
-    echo "Please run the script with sudo root access" | tee -a 
+    echo "Please run the script with sudo root access" | tee -a $LOG_FILE
     exit 1
   }
 fi
@@ -25,10 +25,10 @@ fi
 
 for package in $@
 do 
-    dnf list installed $package 
+    dnf list installed $package &>>$LOG_FILE
     if [ $? -ne 0 ]; then
        echo "Software $package was not yet installed" 
-       dnf install $package -y
+       dnf install $package -y &>>$LOG_FILE
        VALIDATE $? installing $package
 else
       echo "Software $package was already installed" 
