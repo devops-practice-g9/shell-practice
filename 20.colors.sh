@@ -13,8 +13,8 @@ N="\e[0m"
 
 if [ $Userid -ne 0 ]; then
   {
-    echo "$G Userid is $Userid"
-    echo "$R Please run the script with sudo root access" | tee -a $LOG_FILE
+    echo -e "$G Userid is $Userid"
+    echo -e "$R Please run the script with sudo root access" | tee -a $LOG_FILE
     exit 1
   }
 fi
@@ -23,9 +23,9 @@ mkdir -p /var/log/Shell_Script
 
 VALIDATE() {
    if [ $? -eq 0 ]; then
-      echo "$G $2....Success"
+      echo -e "$G $2....Success"
     else
-      echo "$R $2...Failure"
+      echo -e "$R $2...Failure"
 fi
 }
 
@@ -33,10 +33,10 @@ for package in $@
 do 
     dnf list installed $package 
     if [ $? -ne 0 ]; then
-       echo "$R Software $package was not yet installed" 
+       echo -e "$R Software $package was not yet installed" 
        dnf install $package -y &>>$LOG_FILE
        VALIDATE $? installing $package
 else
-      echo "$Y Software $package was already installed" 
+      echo -e "$Y Software $package was already installed" 
     fi
 done
